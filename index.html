@@ -4,126 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro de Mantenimiento</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+
     <div class="container">
+        <div class="x-container">
 
-<img src="img/banner.png">
+        <div class="imageContainer">
 
-
+            <img src="img/banner.png" class="img-fluid" alt="banner">
+        
+        </div>
+            <div class="form-container">
+        
+        <!-- <img src="img/banner.png"> -->
+        
+        
+        
+        
+              <br><br> <br> 
+        
+        
+        
+               <p><label>Fecha de Inicio:</label>  <input id="fechaInicio" type="date"> </input>  </p> 
+        
+               
+                <form id="frmInventario">
+                    <label for="lbDeparamento">Departamento / Área</label> <br>
+                    <Select id="departamento"> Departamento / Área:
+                        <option value="Vicerrectoría"> Vicerrectoría</option>
+                        <option value="Académico"> Académico</option>
+                        <option value="Administrativo"> Administrativo</option>
+                        <option value="RRHH"> RRHH</option>
+                        <option value="Postgrado"> Postgrado</option>
+                        <option value="Registro"> Registro</option>
+                        <option value="Admisiones"> Admisiones</option>
+                        <option value="TIC"> TIC</option>
+                        <option value="Laboratorio de Informática"> Laboratorios de Informática</option>
+                        <option value="Biblioteca"> Biblioteca</option>
+        
+                    </Select> <br> <br>
+        
+                    
+                    
+                    <label for="lblResponableEquipo">Responsable del Equipo:</label>
+                    <input type="text" id="inputResponsable" name="inputResponsable" required><br><br>
+        
+                    <label for="lblcorreoeletronico">Correo Eletrónico:</label>
+                    <input type="text" id="inputcorreo" name="inputcorreo" required><br><br>
+        
+                    <label for="lblTipoEquipo"  name="tipoEquipo">Tipo de Equipo</label> <br>
+                    <Select id="tipoEquipo"> Tipo de Equipo:
+                        <option value="Computadora de Escritorio">Computadora de Escritorio</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Impresora">Impresora</option>
+                        <option value="Proyector">Proyector </option>
+                        <option value="Acces Point"> Acces Point</option>
+                        <option value="Switch"> Switch</option>
+                        <option value="Router"> Router</option>
+                        <option value="Puerto de Red"> Puerto de red</option>
+                        <option value="Scanner"> Scanner</option>
+                        <option value="Teléfono IP"> Teléfono IP</option>
+                        
+                       
+        
+                    </Select> <br> <br>
+        
+        
+                    <label for="lblMarca">Marca:</label>
+                    <input type="text" id="marca" name="marca" required><br><br>
+                    <label for="lblModelo">Modelo:</label>
+                    <input type="text" id="modelo" name="modelo" required><br><br>
+                    <label for="lblserial">Serial:</label>
+                    <input type="text" id="serial" name="serial" required><br><br>
+        
+                    <label for="lbltareaDiag">Diagnóstico:</label>
+                    <div class="lbltareaDiag">
+                        <textarea class="form-control " placeholder="Diagnóstico" id="tarea01" name="Diagnóstico"> Diagnóstico</textarea> 
+        
+                    </div> 
+                    <br><br>
+        
+                    <!-- <label for="lbltareaDiag">Diagnóstico:</label>
+                    <textarea  id="tarea01" name="nmDiag" rows="5" cols="88">
+                    </textarea><br><br> -->
+        
+                    <label for="lblprocedimiento"  name="tipoEquipo">Procedimiento a realizar:</label> <br>
+                    <Select id="procedimiento"> Procedimiento:
+                        <option value="Mantenimiento Correctivo">1. Mantenimiento Correctivo</option>
+                        <option value="Mantenimiento Preventivo">2. Mantenimiento Preventivo</option>
+                        <option value="Mantenimiento Predictivo">3. Mantenimiento Predictivo</option>
+                        <option value="Mantenimiento Proactivo">4. Mantenimiento Proactivo</option>
+                        <option value="Diagnóstico de Hardware">5. Diagnóstico de Hardware</option>
+                        <option value="Diagnóstico de Software">6. Diagnóstico de Software</option>
+                        <option value="Diagnóstico de Rendimiento">7. Diagnóstico de Rendimiento</option>
+                        <option value="Diagnóstico de Seguridadr">8. Diagnóstico de Seguridad</option>
+                        <option value="Problemas de Inicio y Apagado">9. Problemas de Inicio y Apagado</option>
+                        <option value="Diagnóstico de Periféricos">10. Diagnóstico de Periféricos</option>
+                       
+        
+                    </Select> <br> <br>
+        
+        
+        
+                   <!-- <label for="lbltareaDiag">Observaciones:</label>
+                    <textarea id="tarea02" name="observaciones" rows="5" cols="88">
+                    </textarea><br><br>  -->
+          
+                    <label for="lbltareaDiag">Obeservaciones</label>
+                    <div class="lbltareaDiag">
+                        <textarea class="form-control" placeholder="Observaciones" id="tarea02" name="observaciones"></textarea>  
+                        
+                      </div> 
+                      <br><br>
+        
+        
+                    <label for="lblTipoEquipo"  name="tipoEquipo">Responsable del Mantenimiento:</label> <br>
+                    <Select id="rM"> Responsable:
+                        <option value="Andrés Vázquez (Puma)">Andrés Vázquez (Puma)</option>
+                        <option value="Ariel Payano">Ariel Payano</option>
+                        <option value="Bryan Lugo">Bryan Lugo</option>
+                        <option value="Ale">Diomedes Vallejo </option>
+                        <option value="Jeyson Herrera">Jeyson Herrera</option>
+                        <option value="Joeli Martinez">  Joeli Martinez  </option>
+                        <option value="José Paniagua">José Paniagua</option>
+                        <option value="Natalia Figueroa">Natalia Figueroa</option>
+        
+                       
+        
+                    </Select> <br> <br>
+                   
+                    
+                    <p>
+        
+                    <button type="submit">Registrar</button>
+                    
+        
+        
+        
+                    
+        
+                    
+                </form>
+            </div>
+        </div>
     
-
-      <br><br> <br> 
-
-
-
-       <p><label>Fecha de Inicio:</label>  <input id="fechaInicio" type="date"> </input>  </p> 
-
-       
-        <form id="frmInventario">
-            <label for="lbDeparamento">Departamento / Área</label> <br>
-            <Select id="departamento"> Departamento / Área:
-                <option value="Vicerrectoría"> Vicerrectoría</option>
-                <option value="Académico"> Académico</option>
-                <option value="Administrativo"> Administrativo</option>
-                <option value="RRHH"> RRHH</option>
-                <option value="Postgrado"> Postgrado</option>
-                <option value="Registro"> Registro</option>
-                <option value="Admisiones"> Admisiones</option>
-                <option value="TIC"> TIC</option>
-                <option value="Laboratorio de Informática"> Laboratorios de Informática</option>
-
-            </Select> <br> <br>
-
-            
-            
-            <label for="lblResponableEquipo">Responsable del Equipo:</label>
-            <input type="text" id="inputResponsable" name="inputResponsable" required><br><br>
-
-            <label for="lblcorreoeletronico">Correo Eletrónico:</label>
-            <input type="text" id="inputcorreo" name="inputcorreo" required><br><br>
-
-            <label for="lblTipoEquipo"  name="tipoEquipo">Tipo de Equipo</label> <br>
-            <Select id="tipoEquipo"> Tipo de Equipo:
-                <option value="Computadora de Escritorio">Computadora de Escritorio</option>
-                <option value="Laptop">Laptop</option>
-                <option value="Impresora">Impresora</option>
-                <option value="Proyector">Proyector </option>
-                <option value="Acces Point"> Acces Point</option>
-                <option value="Switch"> Switch</option>
-                <option value="Router"> Router</option>
-                <option value="Puerto de Red"> Puerto de red</option>
-                <option value="Scanner"> Scanner</option>
-                <option value="Teléfono IP"> Teléfono IP</option>
-                
-               
-
-            </Select> <br> <br>
-
-
-            <label for="lblMarca">Marca:</label>
-            <input type="text" id="marca" name="marca" required><br><br>
-            <label for="lblModelo">Modelo:</label>
-            <input type="text" id="modelo" name="modelo" required><br><br>
-            <label for="lblserial">Serial:</label>
-            <input type="text" id="serial" name="serial" required><br><br>
-
-            <label for="lbltareaDiag">Diagnóstico:</label>
-            <textarea  id="tarea01" name="nmDiag" rows="5" cols="88">
-            </textarea><br><br>
-
-            <label for="lblprocedimiento"  name="tipoEquipo">Procedimiento a realizar:</label> <br>
-            <Select id="procedimiento"> Procedimiento:
-                <option value="Mantenimiento Correctivo">1. Mantenimiento Correctivo</option>
-                <option value="Mantenimiento Preventivo">2. Mantenimiento Preventivo</option>
-                <option value="Mantenimiento Predictivo">3. Mantenimiento Predictivo</option>
-                <option value="Mantenimiento Proactivo">4. Mantenimiento Proactivo</option>
-                <option value="Diagnóstico de Hardware">5. Diagnóstico de Hardware</option>
-                <option value="Diagnóstico de Software">6. Diagnóstico de Software</option>
-                <option value="Diagnóstico de Rendimiento">7. Diagnóstico de Rendimiento</option>
-                <option value="Diagnóstico de Seguridadr">8. Diagnóstico de Seguridad</option>
-                <option value="Problemas de Inicio y Apagado">9. Problemas de Inicio y Apagado</option>
-                <option value="Diagnóstico de Periféricos">10. Diagnóstico de Periféricos</option>
-               
-
-            </Select> <br> <br>
-
-
-
-            <label for="lbltareaDiag">Observaciones:</label>
-            <textarea id="tarea02" name="observaciones" rows="5" cols="88">
-            </textarea><br><br>
-
-
-            <label for="lblTipoEquipo"  name="tipoEquipo">Responsable del Mantenimiento:</label> <br>
-            <Select id="rM"> Responsable:
-                <option value="Andrés Vázquez (Puma)">Andrés Vázquez (Puma)</option>
-                <option value="Ariel Payano">Ariel Payano</option>
-                <option value="Bryan Lugo">Bryan Lugo</option>
-                <option value="Ale">Diomedes Vallejo </option>
-                <option value="Jeyson Herrera">Jeyson Herrera</option>
-                <option value="Joeli Martinez">  Joeli Martinez  </option>
-                <option value="José Paniagua">José Paniagua</option>
-                <option value="Natalia Figueroa">Natalia Figueroa</option>
-
-               
-
-            </Select> <br> <br>
-           
-            
-            <p>
-
-            <button type="submit">Registrar</button>
-            
-
-
-
-            
-
-            
-        </form>
     </div>
+
+ 
+
 
     <script src="script.js"></script>
 </body>
